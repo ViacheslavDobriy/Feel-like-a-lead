@@ -6,6 +6,13 @@ int GetNumber()
     int number = Convert.ToInt32(Console.ReadLine());
     return number;
 }
+void ShowNumber(int[] Array, int PowNumber)
+{
+    for(int k=0; k<PowNumber;k++)
+    {
+        Console.Write(Array[k]);
+    }
+}
 int number = GetNumber();
 int Pow = 0;
 int i = 0;
@@ -24,7 +31,4 @@ for(int j = Pow-1; j>=0;j--)
     Array[j]=result;
     number=number/2;
 }
-for(int k=0; k<Pow;k++)
-{
-    Console.Write(Array[k]);
-}
+ShowNumber(Array, Pow);
